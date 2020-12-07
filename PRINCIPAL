@@ -1,0 +1,49 @@
+package u3e5;
+import java.util.Scanner;
+public class Principal {
+
+         public static void main(String[] args) {
+      boolean continuar= true;
+      String numero, n="a";
+        int opcion; 
+       ColaDinamica Cola = new ColaDinamica();
+        Scanner leer = new Scanner(System.in);
+        while(continuar){
+            System.out.println("Menu");
+            System.out.println("1.-Insertar");
+   
+ 
+            System.out.println("2.-Eleminar");
+            System.out.println("3.-Mostrar\t");
+            System.out.println("4.-Salir");
+           
+           
+            opcion=leer.nextInt();
+             System.out.println("----------");
+            switch(opcion){
+                case 1:
+                    System.out.println("Ingresa un valor");
+                    numero=leer.next();
+                                          
+                        Cola.Empujar(numero);
+                break;    
+                case 2:
+                    Cola.SacarCo(n);
+                    
+                case 3:
+                    Cola.MostrarCola();
+                    
+                break; 
+                case 4:
+                    continuar=false;
+                break; 
+                default:
+                    System.out.println(opcion+" No es una opcion del menu");
+                    break;
+            }
+             System.out.println("----------");
+        }  
+        
+    }
+    
+}
